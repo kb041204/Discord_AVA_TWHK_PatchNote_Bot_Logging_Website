@@ -22,6 +22,10 @@ h1, p {
 	font-family: "Lucida Console", Courier, monospace;
 	color: Chartreuse;
 }
+.log_error {
+	font-family: "Lucida Console", Courier, monospace;
+	color: red;
+}
 .links {
 	padding-top: 15px;
 }
@@ -61,7 +65,11 @@ function AutoRefresh() {
 	$file = fopen($path, "r");
 	if ($file) {
 		while(($line = fgets($file)) !== false) {
-			echo $line . "<BR>";
+			if(strpos($line, '[Error]') !== false) {
+				echo "<div class='log_error'>" . $line . "</div>";
+			} else {
+				echo $line . "<BR>";
+			}
 		}
 
 		//Retrieve last log
