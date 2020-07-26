@@ -20,11 +20,16 @@ h1, p {
 }
 .log {
 	font-family: "Lucida Console", Courier, monospace;
+	color: white;
+}
+.log_normal {
 	color: Chartreuse;
 }
 .log_error {
-	font-family: "Lucida Console", Courier, monospace;
 	color: red;
+}
+.log_posted {
+	color: cyan;
 }
 .links {
 	padding-top: 15px;
@@ -67,8 +72,10 @@ function AutoRefresh() {
 		while(($line = fgets($file)) !== false) {
 			if(strpos($line, '[Error]') !== false) {
 				echo "<div class='log_error'>" . $line . "</div>";
+			} else if(strpos($line, 'Posted in discord:') !== false) {
+				echo "<div class='log_posted'>" . $line . "</div>";
 			} else {
-				echo $line . "<BR>";
+				echo "<div class='log_normal'>" . $line . "</div>";
 			}
 		}
 
