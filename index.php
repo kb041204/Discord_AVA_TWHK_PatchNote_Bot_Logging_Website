@@ -72,7 +72,7 @@ function AutoRefresh() {
 		while(($line = fgets($file)) !== false) {
 			if(strpos($line, '[Error]') !== false) {
 				echo "<div class='log_error'>" . $line . "</div>";
-			} else if(strpos($line, 'Posted in discord:') !== false) {
+			} else if(strpos($line, 'Posted in discord:') !== false or strpos($line, 'Edited post in discord:') !== false) {
 				echo "<div class='log_posted'>" . $line . "</div>";
 			} else {
 				echo "<div class='log_normal'>" . $line . "</div>";
@@ -98,6 +98,9 @@ document.getElementById('your_time').innerHTML = date.toString();
 </script>
 <div class="links">
 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_BLANK">GCP account information</A>
+</div>
+<div style="border: 2px Solid Chartreuse; display: inline-block; margin-top: 10px;">
+<img src="duck.png">
 </div>
 </BODY>
 </HTML>
