@@ -72,16 +72,7 @@ span.log_time {
 		font-size: 1em;
 	}
 	.log {
-		font-size: small;
-	}
-	.log_normal {
-		font-size: small;
-	}
-	.log_error {
-		font-size: small;
-	}
-	.log_posted {
-		font-size: small;
+		font-size: x-small;
 	}
 	.links a {
 		font-size: small;
