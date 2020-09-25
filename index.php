@@ -1,6 +1,7 @@
 <HTML>
 <HEAD>
 <TITLE>Discord AVA BOT Log</TITLE>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <STYLE>
 body {
 	background-color: black;
