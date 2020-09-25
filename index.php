@@ -55,11 +55,18 @@ span.log_time {
 	font-size:1.15em;
 }
 @media only screen and (max-width: 1440px) {
+	body {
+		padding: 5px;
+	}
 	h1 {
 		font-size: 1.25em;
 	}
 	p {
 		font-size: 0.75em;
+	}
+	.log_entries {
+		border: 2px solid DarkGrey;
+		padding: 5px;
 	}
 	.log_title {
 		font-size: 1em;
