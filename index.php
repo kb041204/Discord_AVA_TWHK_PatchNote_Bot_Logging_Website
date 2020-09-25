@@ -50,6 +50,42 @@ h1, p {
 span.time {
 	margin-left: 30px;
 }
+span.log_time {
+	color:LightGrey;
+	font-size:1.15em;
+}
+@media only screen and (max-width: 1440px) {
+	h1 {
+		font-size: 1.25em;
+	}
+	p {
+		font-size: 0.75em;
+	}
+	.log_title {
+		font-size: 1em;
+	}
+	.log {
+		font-size: small;
+	}
+	.log_normal {
+		font-size: small;
+	}
+	.log_error {
+		font-size: small;
+	}
+	.log_posted {
+		font-size: small;
+	}
+	.links a {
+		font-size: small;
+	}
+	.links a:link, a:visited {
+		padding: 5px 12px;
+	}
+	span.log_time {
+		font-size: 0.75em;
+	}
+}
 </STYLE>
 <script type="text/Javascript">
 function AutoRefresh() {
@@ -61,7 +97,7 @@ function AutoRefresh() {
 <H1>AVA TW/HK Update News Bot log entry</H1>
 <P>This page reloads itself every 60 seconds</P>
 <div class="log_entries">
-<span style="color:LightGrey; font-size:1.15em;">Time shown here are all in GMT, GMT time now: <span id="time_UTC">Please enable JavaScript to see this line</span></span><br><br>
+<span class="log_time">Time shown here are all in GMT, GMT time now: <span id="time_UTC">Please enable JavaScript to see this line</span></span><br><br>
 <span class="log_title">Last line of log</span><br>
 <span id="last_line" class="log">Please enable javascript to see this line</span><br><br>
 <span class="log_title">All logs</span><br>
